@@ -23,3 +23,5 @@ function changeImage() {
 }
 
 changeImage();
+
+feather.replace();
