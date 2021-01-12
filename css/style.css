@@ -1,0 +1,136 @@
+:root{
+  --width: 1200px;
+  --primary: #6E0BD6;
+  --secondary: #E37601;
+  --text: rgb(74, 74, 74);
+  --text-light: rgb(153, 153, 153);
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#root{
+  width: 100%;
+  font-family: "Nunito Sans", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* header */
+
+header{
+  height: 80px;
+  width: 100%;
+  border-bottom: 1px solid rgb(229, 229, 229);
+}
+
+section{
+  width: var(--width);
+}
+
+/* breadcrumb */
+
+.breadcrumb{
+  width: 100%;
+  height: 56px;
+  display: flex;
+  align-items: center;
+}
+
+.breadcrumb a{
+  font-size: 12px;
+  color: var(--text);
+  text-decoration: none;
+}
+
+.breadcrumb a:hover{
+  color: var(--primary);
+}
+
+.breadcrumb span{
+  width: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  text-align: center;
+  color: var(--text);
+  opacity: 0.5;
+}
+
+/* product */
+
+.product .info .title{
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32px;
+  color: var(--text);
+}
+
+.product .info .date{
+  font-size: 12px;
+  line-height: 16px;
+  color: var(--text-light);
+  margin-top: 8px;
+}
+
+/* images */
+
+.product .images{
+  display: flex;
+  width: 850px;
+  height: 400px;
+  flex-direction: row;
+  margin-top: 16px;
+}
+
+.product .images #image{
+  flex: 1;
+  height: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.product .images #image img#principal{
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  z-index: 100;
+}
+
+.product .images #image img#fundo{
+  position: absolute;
+  height: 200%;
+  width: 200%;
+  filter: blur(30px);
+  top: -50%;
+  left: -30%;
+}
+
+.product .images .slider{
+  display: flex;
+  width: 64px;
+  height: 100%;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.product .images .slider .item{
+  width: 56px;
+  height: 56px;
+  border-radius: 4px;
+  margin-bottom: 8px;
+  object-fit: cover;
+  opacity: 0.64;
+  cursor: pointer;
+}
+
+.product .images .slider .item.selected{
+  opacity: 1;
+}
